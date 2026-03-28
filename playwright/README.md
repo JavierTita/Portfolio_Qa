@@ -1,58 +1,28 @@
-# Playwright - SauceDemo Test Suite
+# Playwright Automation Tests
 
-Automated test suite for [SauceDemo](https://www.saucedemo.com) built with Playwright and Python.
+## Test Suite - Saucedemo
 
-## Tests
+### test_login.py — Login Test Suite
+4 test cases covering all login scenarios:
 
-| Test | Description |
-|------|-------------|
-| `test_login` | Navigates to SauceDemo, logs in with valid credentials and verifies redirect to inventory page |
-| `test_checkout` | Full purchase flow — logs in, selects Sauce Labs Backpack, adds to cart, completes checkout and validates order confirmation |
+- **test_sucesslogin** — Successful login, verifies redirect to inventory page
+- **test_emptyfields** — Both fields empty, verifies error message
+- **test_emptyusername** — Password filled, username empty, verifies error message
+- **test_emptypassword** — Username filled, password empty, verifies error message
 
-## Tech stack
+### test_checkout.py — Complete Purchase Flow
+End-to-end test covering the full purchase process:
 
-- Python 3.11
+- Login with valid credentials
+- Select product (Sauce Labs Backpack)
+- Add to cart
+- Proceed to checkout
+- Fill personal information form
+- Complete purchase
+- Verify success message "Thank you for your order!"
+
+### Tools used:
 - Playwright
-- pytest
-
-## Setup
-
-1. Clone the repository
-```bash
-git clone https://github.com/JavierTita/Portfolio_Qa.git
-cd Portfolio_Qa/playwright
-```
-
-2. Create and activate virtual environment
-```bash
-python -m venv .venv
-.venv\Scripts\activate  # Windows
-```
-
-3. Install dependencies
-```bash
-pip install playwright pytest-playwright
-playwright install
-```
-
-4. Run tests
-```bash
-pytest test_saucedemo.py
-```
-
-## Test credentials
-
-Uses the standard SauceDemo test account:
-- **Username:** `standard_user`
-- **Password:** `secret_sauce`
-
-## Selenium vs Playwright
-
-This project replicates the same test suite available in the `selenium/` folder, allowing a direct comparison between both frameworks.
-
-| | Selenium | Playwright |
-|---|---|---|
-| Driver setup | Manual via webdriver-manager | Automatic |
-| Waits | Explicit WebDriverWait required | Built-in auto-waiting |
-| Lines of code | ~50 | ~30 |
-| Browser launch | ChromeOptions + Service | `p.chromium.launch()` |
+- Pytest
+- Python
+- CSS Selectors (#id, .class, [data-test])
