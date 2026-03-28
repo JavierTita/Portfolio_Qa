@@ -9,6 +9,8 @@
 - **test_emptyfields** — Both fields empty, verifies error message
 - **test_emptyusername** — Password filled, username empty, verifies error message
 - **test_emptypassword** — Username filled, password empty, verifies error message
+- **test_logout**        — Successful login and logout, verifies return to login page and login button visibility
+
 
 ### test_checkout.py — Complete Purchase Flow
 End-to-end test covering the full purchase process:
