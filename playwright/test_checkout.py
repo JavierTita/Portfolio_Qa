@@ -1,5 +1,5 @@
 import pytest
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 
 @pytest.fixture
 def page():
@@ -9,25 +9,19 @@ def page():
         yield page
         browser.close()
 
-def test_login(page):
-    page.goto("https://www.saucedemo.com")
-    page.fill("#user-name", "standard_user")
-    page.fill("#password", "secret_sauce")
-    page.click("#login-button")
-    assert page.url == "https://www.saucedemo.com/inventory.html"
 
 def test_checkout(page):
     page.goto("https://www.saucedemo.com")
     page.fill("#user-name", "standard_user")
     page.fill("#password", "secret_sauce")
     page.click("#login-button")
-    page.click("//div[@data-test='inventory-item-name' and text()='Sauce Labs Backpack']")
+    page.get_by_text("Sauce Labs Backpack").click()
     page.click("#add-to-cart")
-    page.click(".shopping_cart_link")
+    page.click("#shopping_cart_container")
     page.click("#checkout")
     page.fill("#first-name", "Javier")
     page.fill("#last-name", "Tita")
     page.fill("#postal-code", "5006")
     page.click("#continue")
     page.click("#finish")
-    assert page.inner_text("h2.complete-header") == "Thank you for your order!"
+    expect(page.locator("[data-test=\"complete-header\"]")).to_contain_text("Thank you for your order!")

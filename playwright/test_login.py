@@ -37,3 +37,13 @@ def test_emptypassword(page):
     expect(page.locator("[data-test=\"error\"]")).to_be_visible()
     expect(page.locator("[data-test=\"error\"]")).to_contain_text("Epic sadface: Password is required")
 
+def test_logout(page):
+    page.goto("https://www.saucedemo.com/")
+    page.fill("#user-name","standard_user")
+    page.fill("#password","secret_sauce")
+    page.click("#login-button")
+    page.click("#react-burger-menu-btn")
+    page.click("#logout_sidebar_link")
+    expect(page).to_have_url("https://www.saucedemo.com/")
+    expect(page.locator("#login-button")).to_be_visible()
+
