@@ -96,7 +96,7 @@ Automated tests using Katalon Studio.
 ## 🎓 Education & Certifications
 
 - **QA Manual Tester** — Coderhouse (Oct 2025 – Dec 2025) ✅
-- **QA Automation Testing** — Academia QA (Feb 2026 – present) 🔄
+- **QA Automation Testing** — Academia QA (Feb 2026 – Marcha 2026)
 - **Técnico Superior en Desarrollo de Software** — ISPC (Apr 2026 – present) 🔄
 - **English B2** — EF SET Certificate ✅
 
