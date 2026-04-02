@@ -2,8 +2,7 @@
 
 ## QA Tester | Manual Testing | API Testing | Automation Testing
 
-I'm a QA Tester based in Córdoba, Argentina, with 20 years of experience in the automotive manufacturing industry, 
-including 10 years as a Logistics Leader — bringing deep domain knowledge to software quality assurance in industrial and supply chain systems.
+I'm a QA Tester based in Córdoba, Argentina, with 20 years of experience in the automotive manufacturing industry, including 10 years as a Logistics Leader — bringing deep domain knowledge to software quality assurance in industrial and supply chain systems.
 
 Currently expanding into QA Automation and Software Development.
 
@@ -22,14 +21,14 @@ Currently expanding into QA Automation and Software Development.
 **Performance Testing**
 - Google Lighthouse — performance, accessibility, SEO, best practices analysis
 
-**Automation Testing (in progress)**
+**Automation Testing**
 - Katalon Studio — web and mobile automation, keywords, object repository
 - Cypress — end-to-end testing, custom commands, screenshots
-- Selenium WebDriver — (in progress)
-- Playwright — (in progress)
+- Selenium WebDriver — login, checkout, assertions with Python
+- Playwright — login suite, checkout, product sorting, price validation, cart management
 
 **Programming**
-- Python — fundamentals, conditionals, loops, functions (ISPC)
+- Python — fundamentals, conditionals, loops, functions, OOP (ISPC)
 - JavaScript — basic (Cypress)
 
 **Version Control**
@@ -89,14 +88,42 @@ Automated tests using Katalon Studio.
 - Assertions and verifications
 - Mobile automation with Appium
 
-📄 Files:katalon_studio/mobile/web
+📄 Files: `katalon_studio/` — Web and mobile test cases
+
+---
+
+### 🔬 Saucedemo – Selenium WebDriver Automation
+Automated tests using Selenium WebDriver with Python.
+
+- Login flow with valid credentials
+- URL verification after successful login
+- Complete checkout flow with product selection
+- Order confirmation message assertion
+- ChromeDriver managed automatically with webdriver-manager
+- Headless execution support
+
+📄 Files: `selenium/` — Selenium test scripts
+
+---
+
+### 🎭 Saucedemo – Playwright Automation
+Full test suite using Playwright with Python and Pytest.
+
+- Login suite: success, empty fields, empty username, empty password, logout
+- Complete purchase flow with checkout verification
+- Product sorting Z to A with first item verification
+- Price validation for all 6 products using filter and loop
+- Add 6 products and remove all, verify empty cart
+- Shared fixtures via conftest.py (page and logged_page)
+
+📄 Repository: [Playwright-Python-test-and-code](https://github.com/JavierTita/Playwright-Python-test-and-code)
 
 ---
 
 ## 🎓 Education & Certifications
 
 - **QA Manual Tester** — Coderhouse (Oct 2025 – Dec 2025) ✅
-- **QA Automation Testing** — Academia QA (Feb 2026 – Marcha 2026)
+- **QA Automation Testing** — Academia QA (Feb 2026 – Mar 2026) ✅
 - **Técnico Superior en Desarrollo de Software** — ISPC (Apr 2026 – present) 🔄
 - **English B2** — EF SET Certificate ✅
 
@@ -104,7 +131,7 @@ Automated tests using Katalon Studio.
 
 ## 📫 Contact
 
-- GitHub: [JavierTita](https://github.com/JavierTita)
-- Location: Córdoba, Argentina
-- Open to remote work opportunities
+- **GitHub:** [JavierTita](https://github.com/JavierTita)
+- **Location:** Córdoba, Argentina
+- **Open to remote work opportunities**
 
